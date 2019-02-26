@@ -1,3 +1,7 @@
 #!/bin/sh
-kubectl delete service apache catalog customer order 
-kubectl delete deployments apache catalog customer order 
+if kubectl get deployments apache ; then
+    kubectl delete service apache catalog customer order 
+    kubectl delete deployments apache catalog customer order 
+else
+    echo "deployment does not exist"
+fi    
