@@ -10,3 +10,5 @@ kubectl run customer --image=docker.io/$DOCKER_ACCOUNT/customer:latest --port=80
 kubectl expose deployment/customer --type="LoadBalancer" --port 8080
 kubectl run order --image=docker.io/$DOCKER_ACCOUNT/order:latest --port=8080
 kubectl expose deployment/order --type="LoadBalancer" --port 8080
+
+exit 0
