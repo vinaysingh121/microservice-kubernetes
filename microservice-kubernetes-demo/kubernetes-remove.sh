@@ -5,3 +5,4 @@ if kubectl get deployments apache ; then
 else
     echo "deployment does not exist"
 fi    
+exit 0
